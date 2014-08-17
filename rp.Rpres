@@ -1,0 +1,35 @@
+rp
+========================================================
+author: 
+date: 
+
+
+
+---
+## Interactive Chart
+
+```{r echo = F, results = 'asis'}
+require(rCharts)
+require(slidify, slidifyLibraries)
+haireye = as.data.frame(HairEyeColor)
+n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
+  data = subset(haireye, Sex == 'Male')
+)
+n1$print('chart1')
+```
+
+---
+
+
+
+
+```{r}
+summary(cars)
+```
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+plot(cars)
+```
